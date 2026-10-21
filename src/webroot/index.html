@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple electrocution bootanimation by Axyon</title>
+<!-- Banner adapted from keepandroidopen.org/banner.js - GPL-3.0-only -->
+<style>
+html,body{margin:0;height:100%;background:#000;color:#fff;font-family:system-ui,sans-serif}
+header{padding:1rem;text-align:center;font-size:1.25rem;font-weight:600}
+.kao-banner{position:relative;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#d32f2f 0%,#b71c1c 100%);border-bottom:4px solid #801313;color:#fff;font-family:'Arial Black',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:1.5rem;text-align:center;text-shadow:0 1px 0 #9e1a1a,0 2px 0 #8a1515,0 3px 0 #751111,0 4px 0 #5e0d0d,0 6px 10px rgba(0,0,0,.5);padding:.5rem 2.5rem;line-height:1.6;box-sizing:border-box;animation:kao-pulse 2s infinite}
+.kao-banner a{color:#fff;text-decoration:none}
+.kao-banner a:hover{text-decoration:underline}
+.kao-banner-close{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:.8em;cursor:pointer;opacity:.7;padding:.25rem .5rem;line-height:1;text-shadow:none}
+.kao-banner-close:hover{opacity:1}
+@keyframes kao-pulse{0%{box-shadow:0 0 0 0 rgba(211,47,47,.7)}70%{box-shadow:0 0 0 15px rgba(211,47,47,0)}100%{box-shadow:0 0 0 0 rgba(211,47,47,0)}}
+@media (max-width:600px){.kao-banner{font-size:1rem;letter-spacing:1px;padding:.5rem 2rem}}
+</style>
+</head>
+<body>
+<header>Apple electrocution bootanimation by Axyon</header>
+<div id="kao"></div>
+<script>
+(function () {
+  var storageKey = "kao-banner-hidden";
+  var dismissMs = 30 * 24 * 60 * 60 * 1000;
+  try {
+    var dismissed = localStorage.getItem(storageKey);
+    if (dismissed) {
+      if (Date.now() - Number(dismissed) < dismissMs) return;
+      localStorage.removeItem(storageKey);
+    }
+  } catch (e) {}
+
+  var banner = document.createElement("div");
+  banner.className = "kao-banner";
+
+  var link = document.createElement("a");
+  link.href = "https://keepandroidopen.org";
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.textContent = "Android will become a locked-down platform in";
+  banner.appendChild(link);
+  banner.appendChild(document.createElement("br"));
+
+  var countdown = document.createElement("span");
+  countdown.textContent = "\u00A0";
+  banner.appendChild(countdown);
+
+  var closeBtn = document.createElement("button");
+  closeBtn.className = "kao-banner-close";
+  closeBtn.setAttribute("aria-label", "Close");
+  closeBtn.textContent = "\u2715";
+  closeBtn.addEventListener("click", function () {
+    banner.style.display = "none";
+    try { localStorage.setItem(storageKey, String(Date.now())); } catch (e) {}
+  });
+  banner.appendChild(closeBtn);
+
+  document.getElementById("kao").appendChild(banner);
+
+  var target = new Date("Jan 1, 2027 00:00:00").getTime();
+  var fmt = {
+    day: new Intl.NumberFormat("en", { style: "unit", unit: "day", unitDisplay: "narrow" }),
+    hour: new Intl.NumberFormat("en", { style: "unit", unit: "hour", unitDisplay: "narrow" }),
+    minute: new Intl.NumberFormat("en", { style: "unit", unit: "minute", unitDisplay: "narrow" }),
+    second: new Intl.NumberFormat("en", { style: "unit", unit: "second", unitDisplay: "narrow" })
+  };
+  var timer;
+
+  function update() {
+    var d = target - Date.now();
+    var days = Math.floor(d / 86400000);
+    var hours = Math.floor((d % 86400000) / 3600000);
+    var minutes = Math.floor((d % 3600000) / 60000);
+    var seconds = Math.floor((d % 60000) / 1000);
+    var out = [];
+    if (days > 0) out.push(fmt.day.format(days));
+    if (out.length || hours > 0) out.push(fmt.hour.format(hours));
+    if (out.length || minutes > 0) out.push(fmt.minute.format(minutes));
+    out.push(fmt.second.format(seconds));
+    countdown.textContent = out.join(" ");
+    if (d < 0) clearInterval(timer);
+  }
+
+  timer = setInterval(update, 1000);
+  update();
+})();
+</script>
+</body>
+</html>
