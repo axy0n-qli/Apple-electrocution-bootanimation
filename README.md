@@ -2,7 +2,7 @@
 Apple electrocution bootanimation for google pixel
 
 <p align="center">
-  <img src="src/animation.gif" width="85%" alt="Bootanimation Preview">
+  <img src="preview/animation.gif" width="85%" alt="Bootanimation Preview">
 </p>
 
 
