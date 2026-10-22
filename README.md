@@ -17,6 +17,12 @@ Tested on a Google Pixel 9a running Android 17 with Magisk and KSU-Next,It shoul
 3. Go to Modules click on + and install from storage
 4. Select your zip confirm installation and reboot
 
+### 🤓 Building from source
+```bash
+git clone https://github.com/axy0n-qli/Apple-electrocution-bootanimation
+cd Apple-electrocution-bootanimation
+make
+```
 ## 👨‍💻 Contribute?
 Contact me on Discord. See my profile.
 
