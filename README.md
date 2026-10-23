@@ -11,6 +11,9 @@ Apple electrocution bootanimation for google pixel
 
 It should probably work on all current Google Pixel devices. It doesn't work at boot but works with the command 'bootanimation' and in soft reboot.
 
+## 📱 Tested device
+- Google Pixel 9a Android 17
+
 ## 🚀Installation
 1. Install the zip form [release](https://github.com/axy0n-qli/Apple-electrocution-bootanimation/releases/latest)
 2. Open Magisk (or other root manager)
