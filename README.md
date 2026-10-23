@@ -1,5 +1,5 @@
 # 📽️ Apple electrocution-bootanimation
-Apple electrocution bootanimation for google pixel
+Apple electrocution bootanimation for google pixel. Only for pixel!!!!
 
 <p align="center">
   <img src="preview/animation.gif" width="85%" alt="Bootanimation Preview">
