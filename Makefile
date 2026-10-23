@@ -3,7 +3,7 @@ BUILD_DIR := $(DIR)/build
 
 all:
 	mkdir -p $(BUILD_DIR)
-	cp -r $(DIR)/src/files $(DIR)/src/module.prop $(DIR)/src/webroot $(DIR)/src/action.sh $(DIR)/src/customize.sh $(DIR)/src/post-fs-data.sh $(DIR)/src/uninstall.sh $(BUILD_DIR)/
+	cp -r $(DIR)/src/files $(DIR)/src/module.prop $(DIR)/src/webroot $(DIR)/src/action.sh $(DIR)/src/customize.sh $(DIR)/src/post-fs-data.sh $(BUILD_DIR)/
 	cd $(BUILD_DIR)/files/bootanimation && zip -r -0 ../bootanimation.zip ./*
 	rm -rf $(BUILD_DIR)/files/bootanimation
 	cd $(BUILD_DIR) && zip -r -9 $(BUILD_DIR)/apple-electrocution-bootanimation.zip ./*
