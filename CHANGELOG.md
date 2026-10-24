@@ -1,7 +1,10 @@
-### ⚠️ Does not work in some configurations
+## Now not in beta!!! 
 
-customize.sh and prost-fs-data.sh were written by @quratoop 
+## change
+- rename prost-fs-data.sh to prost-mount.sh (@quratoop)
 
-### change 
-- Change prost-fs-data.sh to /data/adb/prost-fs-data.d (@quratoop THANKS!)
-- Added a partial log of boot time (I'm not entirely sure) (@axy0n-qli)
+## What's Changed
+* Update zipUrl to point to version 0.6 by @axy0n-qli in https://github.com/axy0n-qli/Apple-electrocution-bootanimation/pull/4
+* Revise CHANGELOG with new features and fixes by @axy0n-qli in https://github.com/axy0n-qli/Apple-electrocution-bootanimation/pull/5
+*  rename prost-fs-data.sh to prost-mount.sh (@quratoop) #6 
+* Dev by @axy0n-qli in https://github.com/axy0n-qli/Apple-electrocution-bootanimation/pull/6
