@@ -1,7 +1,7 @@
 id=apple-electrocution-bootanimation
 name=Apple Electrocution bootanimation 
-version=v0.6
-versionCode=6
+version=v1.0
+versionCode=10
 author=Axy0n
 description=Apple Electrocution bootanimation for Google Pixel.
 updateJson=https://raw.githubusercontent.com/axy0n-qli/Apple-electrocution-bootanimation/main/update.json
