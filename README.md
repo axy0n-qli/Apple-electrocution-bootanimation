@@ -2,13 +2,8 @@
 Apple electrocution bootanimation for google pixel. Only for pixel!!!!
 
 <p align="center">
-  <img src="preview/animation.gif" width="85%" alt="Bootanimation Preview">
+  <img src="preview/animation.gif" width="50%" alt="Bootanimation Preview">
 </p>
-
-
-## 🔭 Status
-### ⚠️ In development !!!
-not really tested and checked yet
 
 ## 📱 Tested device
 - Google Pixel 9a (Stock firmware)
