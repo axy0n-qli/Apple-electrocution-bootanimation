@@ -1,4 +1,7 @@
-## change 
+### ⚠️ Does not work in some configurations
 
-- Optimizing bootanimation.zip 82,60 mb > 5,12 mb
-- Added customize.sh and a command in prost-fs-data.sh to restart the boot animation to display the custom bootanimation at the end of the boot process.
+customize.sh and prost-fs-data.sh were written by @quratoop 
+
+### change 
+- Change prost-fs-data.sh to /data/adb/prost-fs-data.d (@quratoop THANKS!)
+- Added a partial log of boot time (I'm not entirely sure) (@axy0n-qli)
