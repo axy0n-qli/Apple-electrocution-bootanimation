@@ -10,10 +10,11 @@ Apple electrocution bootanimation for google pixel. Only for pixel!!!!
 - Google Pixel 8a (Stock firmware)
 - Google Pixel 7a (LineageOS)
 ## 🚀Installation
-1. Install the zip form [release](https://github.com/axy0n-qli/Apple-electrocution-bootanimation/releases/latest)
-2. Open Magisk (or other root manager)
-3. Go to Modules click on + and install from storage
-4. Select your zip confirm installation and reboot
+1. Download the zip form [release](https://github.com/axy0n-qli/Apple-electrocution-bootanimation/releases/latest)
+2. Download [Nomount](https://github.com/maxsteeel/nomount/releases/latest) zip
+3. Open Magisk (or other root manager)
+4. Install Nomount zip, reboot
+5. Install the bootanimation and reboot
 
 ### 🤓 Building from source
 ```bash
