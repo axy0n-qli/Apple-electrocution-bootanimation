@@ -9,10 +9,11 @@ unzip -o "$ZIPFILE" "files/bootanimation.zip" -d "$TMPDIR/.apple_bootanimation_u
 
 ui_print "- Find system bootanimation"
 TARGETS=$(find /product /system -name 'bootanimation*.zip' -type f -print)
-ui_print "- Found animations at '$TARGETS'"
 
 ui_print "- Create bootanimation overlay"
 for TARGET in $TARGETS; do
+    ui_print "- Found animation at '$TARGET'"
+
     DEST=
     HEAD="${TARGET#*/}"
 
@@ -29,11 +30,12 @@ done
 ui_print "- Extract module files"
 unzip -o "$ZIPFILE" "module.prop" -d "$MODPATH"
 unzip -o "$ZIPFILE" "action.sh" -d "$MODPATH"
-unzip -o "$ZIPFILE" "post-fs-data.sh" -d "$MODPATH"
+unzip -o "$ZIPFILE" "post-fs-data.sh" -d "$TMPDIR/.apple_bootanimation_unzip"
+mv -f "$TMPDIR/.apple_bootanimation_unzip/post-fs-data.sh" "/data/adb/post-fs-data.d/apple_electrocution_bootanimation.sh"
 unzip -o "$ZIPFILE" "uninstall.sh" -d "$MODPATH"
 unzip -o "$ZIPFILE" "webroot/*" -d "$MODPATH"
 
 ui_print "- Fixing Permissions"
 set_perm "$MODPATH/action.sh" 0 0 0755 "u:object_r:system_file:s0"
-set_perm "$MODPATH/post-fs-data.sh" 0 0 0755 "u:object_r:system_file:s0"
+set_perm "/data/adb/post-fs-data.d/apple_electrocution_bootanimation.sh" 0 0 0755 "u:object_r:system_file:s0"
 set_perm "$MODPATH/uninstall.sh" 0 0 0755 "u:object_r:system_file:s0"

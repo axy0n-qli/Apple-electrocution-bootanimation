@@ -1,5 +1,5 @@
 #!/system/bin/sh
-LOG="/data/local/tmp/bootanim_time.log"
+LOG="/data/local/tmp/apple-electr-bootanim.log"
 
 echo "$(cut -d' ' -f1 /proc/uptime)" > "$LOG"
 
