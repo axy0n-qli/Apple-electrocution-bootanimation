@@ -6,7 +6,7 @@ Apple electrocution bootanimation for google pixel. Only for pixel!!!!
 </p>
 
 ## 📱 Tested device
-- Google Pixel 9a (Stock firmware)
+- Google Pixel 9a (Stock firmware) (LineageOS)
 - Google Pixel 8a (Stock firmware)
 - Google Pixel 7a (LineageOS)
 ## 🚀Installation
