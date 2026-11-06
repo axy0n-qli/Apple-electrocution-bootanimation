@@ -1,4 +1,2 @@
-## Now not in beta!!! 🎉
-
 ## What's Changed
-*  rename prost-fs-data.sh to prost-mount.sh (@quratoop) #6 
+* modifi resolution in desc.txt and remove log by @axy0n-qli in https://github.com/axy0n-qli/Apple-electrocution-bootanimation/pull/13
